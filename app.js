@@ -34,7 +34,7 @@ app.post("/", (req, res) => {
     setTimeout(() => {
       state.id = "1";
       state.transactionhash = "0x88d99a6530714c8790ae3ff22ca81d59f75648172b0fa72e3ec6cac370afa71d"
-      console.log("end waiting for transaction");
+      console.log("End waiting for transaction");
     }, 20000);
 
   }else{
@@ -42,4 +42,4 @@ app.post("/", (req, res) => {
   }
 });
 
-server.listen(3000, () => console.log("Server running on port 3000..."));
+server.listen(process.env.PORT || 3000, () => console.log("Server running on port 3000..."));
